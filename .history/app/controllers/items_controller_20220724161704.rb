@@ -1,4 +1,3 @@
-
 class ItemsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
 
@@ -24,6 +23,7 @@ class ItemsController < ApplicationController
   end
 
   private
+
   def find_item
     Item.find(params[:id])
   end
